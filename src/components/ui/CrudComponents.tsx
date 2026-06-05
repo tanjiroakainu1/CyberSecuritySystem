@@ -109,7 +109,7 @@ interface EmptyStateProps {
 export function EmptyState({ message }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-cyber-200/60 bg-gradient-to-br from-cyber-50/30 to-white px-4 py-12 text-center min-[480px]:px-6 min-[480px]:py-16">
-      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyber-100 to-violet-100 text-3xl shadow-soft">
+      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyber-100 to-emerald-100 text-3xl shadow-soft">
         📋
       </div>
       <p className="text-sm font-medium text-slate-600">{message}</p>

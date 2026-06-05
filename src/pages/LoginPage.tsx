@@ -80,7 +80,11 @@ export function LoginPage() {
             <div className="auth-panel auth-panel-glow auth-panel-equal">
               <div className="auth-panel-header">
                 <div className="flex items-center gap-3">
-                  <span className="auth-panel-icon">🔐</span>
+                  <span className="auth-panel-icon auth-panel-icon-blue">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </span>
                   <div>
                     <h2 className="auth-panel-title">Sign In</h2>
                     <p className="auth-panel-subtitle">Email &amp; password authentication</p>
@@ -134,7 +138,11 @@ export function LoginPage() {
             <div className="auth-panel auth-panel-glow auth-panel-equal">
               <div className="auth-panel-header">
                 <div className="flex items-center gap-3">
-                  <span className="auth-panel-icon">⚡</span>
+                  <span className="auth-panel-icon auth-panel-icon-emerald">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </span>
                   <div>
                     <h2 className="auth-panel-title">Quick Access</h2>
                     <p className="auth-panel-subtitle">Instant demo login per role</p>

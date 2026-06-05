@@ -34,8 +34,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.15); }
-  50% { box-shadow: 0 0 32px rgba(14, 165, 233, 0.35); }
+  0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.15), 0 0 12px rgba(16, 185, 129, 0.1); }
+  50% { box-shadow: 0 0 32px rgba(14, 165, 233, 0.35), 0 0 20px rgba(16, 185, 129, 0.25); }
 }
 
 @keyframes scaleIn {
@@ -80,12 +80,12 @@
     box-shadow: 0 0 24px rgba(14, 165, 233, 0.25), 0 0 48px rgba(14, 165, 233, 0.08);
   }
 
-  .shadow-glow-violet {
-    box-shadow: 0 0 24px rgba(139, 92, 246, 0.2), 0 0 48px rgba(14, 165, 233, 0.1);
+  .shadow-glow-emerald {
+    box-shadow: 0 0 24px rgba(16, 185, 129, 0.22), 0 0 48px rgba(14, 165, 233, 0.1);
   }
 
   .text-gradient-brand {
-    @apply bg-gradient-to-r from-cyber-600 via-violet-600 to-cyber-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyber-600 via-emerald-600 to-cyber-500 bg-clip-text text-transparent;
   }
 }
 
@@ -96,7 +96,7 @@
     --color-brand-600: #0284c7;
     --color-brand-700: #0369a1;
     --color-brand-950: #082f49;
-    --color-auth-bg: #020617;
+    --color-auth-bg: #021a1a;
     --color-auth-surface: #1e293b;
     --color-auth-border: #475569;
   }
@@ -127,7 +127,7 @@
   }
 
   body[data-theme='auth'] ::selection {
-    @apply bg-cyber-500/30 text-white;
+    @apply bg-emerald-500/30 text-white;
   }
 }
 
@@ -179,7 +179,7 @@
 
   .section-title::before {
     content: '';
-    @apply h-6 w-1 rounded-full bg-gradient-to-b from-cyber-500 to-violet-500 shadow-glow;
+    @apply h-6 w-1 rounded-full bg-gradient-to-b from-cyber-500 to-emerald-500 shadow-glow;
   }
 
   .card {
@@ -192,12 +192,12 @@
 
   .stat-card::before {
     content: '';
-    @apply absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-cyber-500 via-violet-500 to-fuchsia-500 opacity-0 transition-opacity duration-300;
+    @apply absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-cyber-500 via-emerald-500 to-emerald-500 opacity-0 transition-opacity duration-300;
   }
 
   .stat-card::after {
     content: '';
-    @apply pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-cyber-400/20 to-violet-400/10 blur-2xl transition-opacity duration-500;
+    @apply pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-cyber-400/20 to-emerald-400/10 blur-2xl transition-opacity duration-500;
   }
 
   .stat-card:hover::before {
@@ -209,7 +209,7 @@
   }
 
   .btn-primary {
-    @apply relative inline-flex min-h-[44px] min-w-[44px] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-cyber-600 via-cyber-500 to-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:from-cyber-700 hover:via-cyber-600 hover:to-violet-700 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-cyber-500 focus:ring-offset-2 active:scale-[0.98];
+    @apply relative inline-flex min-h-[44px] min-w-[44px] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-cyber-600 via-cyber-500 to-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:from-cyber-700 hover:via-cyber-600 hover:to-emerald-700 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-cyber-500 focus:ring-offset-2 active:scale-[0.98];
   }
 
   .btn-secondary {
@@ -217,11 +217,11 @@
   }
 
   .btn-auth-outline {
-    @apply inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-500/80 bg-slate-800/60 px-4 py-2.5 text-sm font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:border-cyber-400/60 hover:bg-slate-700/80 hover:text-white hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-cyber-500/40 active:scale-[0.98];
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-500/80 bg-slate-800/60 px-4 py-2.5 text-sm font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:border-emerald-400/60 hover:bg-slate-700/80 hover:text-white hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-emerald-500/40 active:scale-[0.98];
   }
 
   .btn-tab-active {
-    @apply bg-gradient-to-r from-cyber-600 via-cyber-500 to-violet-600 text-white shadow-glow;
+    @apply bg-gradient-to-r from-cyber-600 via-cyber-500 to-emerald-600 text-white shadow-glow;
   }
 
   .btn-tab-inactive {
@@ -304,7 +304,7 @@
 
   .page-header::after {
     content: '';
-    @apply absolute bottom-0 left-0 h-0.5 w-20 rounded-full bg-gradient-to-r from-cyber-500 via-violet-500 to-transparent sm:w-32;
+    @apply absolute bottom-0 left-0 h-0.5 w-20 rounded-full bg-gradient-to-r from-cyber-500 via-emerald-500 to-transparent sm:w-32;
   }
 
   .page-header-actions {
@@ -319,7 +319,7 @@
   .auth-bg {
     @apply relative min-h-screen w-full overflow-x-hidden text-slate-100;
     background-color: var(--color-auth-bg);
-    background-image: linear-gradient(160deg, #020617 0%, #082f49 45%, #1e1b4b 75%, #0f172a 100%);
+    background-image: linear-gradient(165deg, #020617 0%, #082f49 35%, #064e3b 70%, #022c22 100%);
   }
 
   .auth-bg::before {
@@ -328,7 +328,7 @@
     inset: 0;
     z-index: -2;
     background-color: var(--color-auth-bg);
-    background-image: linear-gradient(160deg, #020617 0%, #082f49 45%, #1e1b4b 75%, #0f172a 100%);
+    background-image: linear-gradient(165deg, #020617 0%, #082f49 35%, #064e3b 70%, #022c22 100%);
   }
 
   .auth-bg::after {
@@ -338,18 +338,18 @@
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(ellipse 60% 40% at 20% 20%, rgba(14, 165, 233, 0.18), transparent),
-      radial-gradient(ellipse 50% 35% at 80% 60%, rgba(139, 92, 246, 0.12), transparent),
-      radial-gradient(ellipse 40% 30% at 50% 90%, rgba(6, 182, 212, 0.1), transparent);
+      radial-gradient(ellipse 60% 40% at 15% 15%, rgba(14, 165, 233, 0.22), transparent),
+      radial-gradient(ellipse 55% 40% at 85% 55%, rgba(16, 185, 129, 0.18), transparent),
+      radial-gradient(ellipse 45% 35% at 50% 95%, rgba(6, 182, 212, 0.12), transparent);
     animation: aurora 12s ease-in-out infinite;
   }
 
   .auth-nav {
-    @apply sticky top-0 z-40 border-b border-cyber-500/20 bg-slate-950/90 shadow-glow backdrop-blur-xl;
+    @apply sticky top-0 z-40 border-b border-emerald-500/20 bg-slate-950/90 shadow-glow backdrop-blur-xl;
   }
 
   .auth-nav-logo {
-    @apply flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyber-400 via-cyber-600 to-violet-600 text-xs font-bold text-white shadow-glow;
+    @apply flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyber-400 via-cyber-600 to-emerald-500 text-white shadow-glow;
   }
 
   .auth-nav-inner {
@@ -369,7 +369,7 @@
   }
 
   .auth-nav-link-active {
-    @apply bg-gradient-to-r from-cyber-600 to-cyber-500 text-white shadow-sm hover:from-cyber-700 hover:to-cyber-600;
+    @apply bg-gradient-to-r from-cyber-600 to-emerald-600 text-white shadow-sm hover:from-cyber-700 hover:to-emerald-700;
   }
 
   .menu-toggle-auth {
@@ -389,7 +389,7 @@
   }
 
   .auth-mobile-link-active {
-    @apply bg-gradient-to-r from-cyber-600 to-cyber-500 text-white;
+    @apply bg-gradient-to-r from-cyber-600 to-emerald-600 text-white;
   }
 
   .auth-page {
@@ -411,7 +411,7 @@
   }
 
   .auth-icon {
-    @apply flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyber-400 via-cyber-600 to-violet-600 text-white shadow-glow animate-float;
+    @apply flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyber-400 via-cyber-600 to-emerald-600 text-white shadow-glow animate-float;
   }
 
   .auth-badge {
@@ -443,7 +443,7 @@
   }
 
   .auth-input {
-    @apply w-full rounded-xl border border-slate-500 bg-slate-700 px-4 py-2.5 text-sm text-white placeholder:text-slate-400 transition-all focus:border-cyber-400 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyber-500/40;
+    @apply w-full rounded-xl border border-slate-500 bg-slate-700 px-4 py-2.5 text-sm text-white placeholder:text-slate-400 transition-all focus:border-emerald-400 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40;
   }
 
   .auth-label {
@@ -451,11 +451,11 @@
   }
 
   .auth-link {
-    @apply font-semibold text-cyber-400 transition-colors hover:text-cyber-300;
+    @apply font-semibold text-emerald-400 transition-colors hover:text-emerald-300;
   }
 
   .auth-badge-accent {
-    @apply rounded-full bg-gradient-to-r from-cyber-500/25 to-violet-500/20 px-2.5 py-1 text-xs font-bold text-cyber-300 ring-1 ring-cyber-500/30;
+    @apply rounded-full bg-gradient-to-r from-cyber-500/25 to-emerald-500/20 px-2.5 py-1 text-xs font-bold text-cyber-300 ring-1 ring-cyber-500/30;
   }
 
   .auth-role-actions {
@@ -468,7 +468,7 @@
   }
 
   .auth-cta-box {
-    @apply rounded-2xl border border-cyber-500/30 bg-gradient-to-br from-cyber-950/95 via-slate-900/90 to-violet-950/80 p-5 text-center shadow-glow backdrop-blur-sm min-[480px]:p-8 sm:p-10;
+    @apply rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-cyber-950/95 via-slate-900/90 to-emerald-950/80 p-5 text-center shadow-glow backdrop-blur-sm min-[480px]:p-8 sm:p-10;
   }
 
   .auth-section-label {
@@ -481,8 +481,8 @@
   }
 
   .guest-hero {
-    @apply relative mb-10 overflow-hidden rounded-3xl border border-cyber-500/25 p-5 shadow-glow backdrop-blur-xl min-[480px]:mb-12 min-[480px]:p-8 sm:p-10;
-    background: linear-gradient(145deg, rgba(8, 47, 73, 0.55) 0%, rgba(15, 23, 42, 0.92) 40%, rgba(30, 27, 75, 0.7) 100%);
+    @apply relative mb-10 overflow-hidden rounded-3xl border border-emerald-500/25 p-5 shadow-glow backdrop-blur-xl min-[480px]:mb-12 min-[480px]:p-8 sm:p-10;
+    background: linear-gradient(145deg, rgba(8, 47, 73, 0.6) 0%, rgba(6, 78, 59, 0.35) 45%, rgba(15, 23, 42, 0.92) 100%);
   }
 
   .guest-hero-grid {
@@ -504,8 +504,24 @@
   }
 
   .guest-hero-glow-b {
-    @apply -bottom-16 -right-16 h-72 w-72 bg-violet-500/20;
+    @apply -bottom-16 -right-16 h-72 w-72 bg-emerald-500/25;
     animation: aurora 10s ease-in-out infinite reverse;
+  }
+
+  .guest-hero-shimmer {
+    @apply pointer-events-none absolute inset-0 opacity-40;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(16, 185, 129, 0.08) 50%,
+      transparent 60%
+    );
+    animation: shimmer 8s ease-in-out infinite;
+  }
+
+  .guest-live-dot {
+    @apply mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.9)];
+    animation: devPulse 2s ease-in-out infinite;
   }
 
   .guest-hero-content {
@@ -529,12 +545,12 @@
   }
 
   .guest-shield-ring-2 {
-    @apply inset-2 border-violet-400/20;
+    @apply inset-2 border-emerald-400/30;
     animation: devRingPulse 3s ease-in-out infinite 0.5s;
   }
 
   .guest-shield-icon {
-    @apply relative flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-cyber-400 via-cyber-600 to-violet-600 text-white shadow-glow sm:h-24 sm:w-24;
+    @apply relative flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-cyber-400 via-cyber-600 to-emerald-500 text-white shadow-glow sm:h-24 sm:w-24;
   }
 
   .guest-hero-text {
@@ -550,7 +566,7 @@
   }
 
   .guest-hero-title-accent {
-    @apply block bg-gradient-to-r from-cyber-300 via-cyan-200 to-violet-300 bg-clip-text text-transparent sm:inline;
+    @apply block bg-gradient-to-r from-cyber-300 via-emerald-300 to-emerald-200 bg-clip-text text-transparent sm:inline;
   }
 
   .guest-hero-desc {
@@ -585,8 +601,12 @@
     @apply flex items-start gap-3 rounded-xl border border-slate-600/40 bg-slate-900/40 p-4 transition-all duration-300 hover:border-cyber-500/40 hover:bg-slate-900/60;
   }
 
+  .guest-pillar-icon-wrap {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyber-500/20 to-emerald-500/20 text-emerald-300 ring-1 ring-emerald-500/30;
+  }
+
   .guest-pillar-icon {
-    @apply text-xl;
+    @apply hidden;
   }
 
   .guest-pillar-title {
@@ -610,7 +630,19 @@
   }
 
   .guest-cta-ghost {
-    @apply text-center text-sm font-semibold text-cyber-400 transition-colors hover:text-cyber-300 sm:px-4;
+    @apply text-center text-sm font-semibold text-emerald-400 transition-colors hover:text-emerald-300 sm:px-4;
+  }
+
+  .guest-cta-emerald {
+    @apply inline-flex items-center justify-center rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-5 py-3.5 text-sm font-bold text-emerald-300 transition-all hover:border-emerald-400/60 hover:bg-emerald-500/20 hover:text-emerald-200;
+  }
+
+  .guest-trust-row {
+    @apply mt-6 flex flex-wrap justify-center gap-2 lg:justify-start;
+  }
+
+  .guest-trust-chip {
+    @apply rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold text-emerald-300/90;
   }
 
   .guest-signin {
@@ -654,7 +686,7 @@
   }
 
   .guest-section-badge {
-    @apply inline-block rounded-full border border-cyber-500/35 bg-gradient-to-r from-cyber-500/15 to-violet-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-cyber-300;
+    @apply inline-block rounded-full border border-emerald-500/35 bg-gradient-to-r from-cyber-500/15 to-emerald-500/20 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-300;
   }
 
   .guest-section-title {
@@ -678,7 +710,7 @@
   }
 
   .guest-block-icon {
-    @apply flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyber-500 to-violet-600 text-xs font-bold text-white;
+    @apply flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyber-500 to-emerald-600 text-xs font-bold text-white;
   }
 
   .guest-timeline {
@@ -698,7 +730,7 @@
   }
 
   .guest-timeline-line {
-    @apply absolute left-1/2 top-10 h-[calc(100%+0.5rem)] w-0.5 -translate-x-1/2 bg-gradient-to-b from-cyber-500/60 to-violet-500/30 sm:top-12;
+    @apply absolute left-1/2 top-10 h-[calc(100%+0.5rem)] w-0.5 -translate-x-1/2 bg-gradient-to-b from-cyber-500/60 to-emerald-500/50 sm:top-12;
   }
 
   .guest-timeline-card {
@@ -798,16 +830,80 @@
   }
 
   .guest-register-hero {
-    @apply relative mb-8 overflow-hidden rounded-2xl border border-cyber-500/25 p-5 text-center shadow-glow backdrop-blur-xl sm:mb-10 sm:p-8;
-    background: linear-gradient(135deg, rgba(8, 47, 73, 0.5) 0%, rgba(30, 27, 75, 0.6) 100%);
+    @apply relative mb-8 overflow-hidden rounded-3xl border border-emerald-500/25 p-6 text-center shadow-glow backdrop-blur-xl sm:mb-10 sm:p-10;
+    background: linear-gradient(135deg, rgba(8, 47, 73, 0.55) 0%, rgba(6, 95, 70, 0.4) 50%, rgba(15, 23, 42, 0.85) 100%);
   }
 
-  .guest-register-hero h1 {
-    @apply text-2xl font-extrabold text-white sm:text-3xl;
+  .guest-register-glow {
+    @apply -left-16 -top-16 h-48 w-48 bg-cyber-500/20;
   }
 
-  .guest-register-hero p {
-    @apply mx-auto mt-2 max-w-md text-sm text-slate-300;
+  .guest-register-glow-b {
+    @apply -bottom-12 -right-12 h-56 w-56 bg-emerald-500/25;
+  }
+
+  .guest-register-title {
+    @apply mt-4 text-2xl font-extrabold text-white sm:text-3xl;
+  }
+
+  .guest-register-desc {
+    @apply mx-auto mt-3 max-w-lg text-sm text-slate-300 sm:text-base;
+  }
+
+  .guest-register-actions {
+    @apply mt-6 flex flex-wrap items-center justify-center gap-3;
+  }
+
+  .guest-role-picker {
+    @apply grid grid-cols-3 gap-2 min-[480px]:grid-cols-5;
+  }
+
+  .guest-role-picker-btn {
+    @apply flex flex-col items-center gap-1.5 rounded-xl border border-slate-600/50 bg-slate-900/40 p-2.5 transition-all hover:border-emerald-500/40;
+  }
+
+  .guest-role-picker-btn-active {
+    @apply border-emerald-400/60 bg-emerald-950/40 shadow-glow ring-1 ring-emerald-500/40;
+  }
+
+  .guest-role-picker-avatar {
+    @apply flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold text-white;
+  }
+
+  .guest-role-picker-name {
+    @apply text-[10px] font-semibold text-slate-400;
+  }
+
+  .guest-role-picker-btn-active .guest-role-picker-name {
+    @apply text-emerald-300;
+  }
+
+  .auth-panel-icon-blue {
+    @apply text-cyber-300 ring-cyber-500/40;
+  }
+
+  .auth-panel-icon-emerald {
+    @apply text-emerald-300 ring-emerald-500/40;
+  }
+
+  .auth-panel-preview {
+    @apply border-emerald-500/20;
+  }
+
+  .guest-feature-item-compact {
+    @apply p-3;
+  }
+
+  .auth-nav-brand-text {
+    @apply bg-gradient-to-r from-white via-cyber-200 to-emerald-200 bg-clip-text text-transparent;
+  }
+
+  .auth-nav-cta {
+    @apply ml-1 rounded-lg bg-gradient-to-r from-emerald-600 to-cyber-600 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition-all hover:from-emerald-500 hover:to-cyber-500 sm:text-sm;
+  }
+
+  .auth-nav-cta-active {
+    @apply ring-2 ring-emerald-400/50;
   }
 
   .modal-overlay {
@@ -827,7 +923,7 @@
     background-color: #f1f5f9;
     background-image:
       radial-gradient(ellipse 80% 50% at 50% -10%, rgba(14, 165, 233, 0.08), transparent),
-      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(139, 92, 246, 0.04), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(16, 185, 129, 0.06), transparent),
       linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   }
 
@@ -881,7 +977,7 @@
   }
 
   .sidebar-link-active {
-    @apply bg-gradient-to-r from-cyber-600 via-cyber-500 to-violet-600 font-semibold text-white shadow-glow hover:from-cyber-700 hover:via-cyber-600 hover:to-violet-700 hover:text-white;
+    @apply bg-gradient-to-r from-cyber-600 via-cyber-500 to-emerald-600 font-semibold text-white shadow-glow hover:from-cyber-700 hover:via-cyber-600 hover:to-emerald-700 hover:text-white;
   }
 
   .sidebar-link-active::before {
@@ -939,7 +1035,7 @@
   }
 
   .btn-header-logout {
-    @apply inline-flex h-10 min-w-[40px] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-cyber-600 via-cyber-500 to-violet-600 px-2.5 text-xs font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-glow min-[480px]:min-h-[44px] min-[480px]:px-4 min-[480px]:text-sm;
+    @apply inline-flex h-10 min-w-[40px] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-cyber-600 via-cyber-500 to-emerald-600 px-2.5 text-xs font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-glow min-[480px]:min-h-[44px] min-[480px]:px-4 min-[480px]:text-sm;
   }
 
   .user-pill {
@@ -947,7 +1043,7 @@
   }
 
   .user-avatar {
-    @apply flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyber-500 to-violet-600 text-sm font-bold text-white shadow-glow ring-2 ring-white;
+    @apply flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyber-500 to-emerald-600 text-sm font-bold text-white shadow-glow ring-2 ring-white;
   }
 
   .flow-step-card {
@@ -955,29 +1051,29 @@
   }
 
   .flow-module-card {
-    @apply rounded-2xl border border-slate-600/50 bg-slate-800/50 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/30 hover:shadow-glow-violet;
+    @apply rounded-2xl border border-slate-600/50 bg-slate-800/50 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-glow-emerald;
   }
 
   /* ── Developer credit ── */
   .developer-avatar {
-    @apply relative flex shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-cyber-500 via-violet-500 to-fuchsia-600 text-white shadow-glow;
+    @apply relative flex shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-cyber-500 via-emerald-500 to-emerald-600 text-white shadow-glow;
   }
 
   .developer-avatar-ring {
-    @apply absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-cyber-400 via-violet-400 to-fuchsia-400 opacity-60 blur-sm;
+    @apply absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-cyber-400 via-emerald-400 to-emerald-400 opacity-60 blur-sm;
     animation: devRingPulse 3s ease-in-out infinite;
   }
 
   .developer-name-xl {
-    @apply bg-gradient-to-r from-white via-cyber-200 to-violet-200 bg-clip-text text-2xl font-extrabold tracking-tight text-transparent sm:text-3xl;
+    @apply bg-gradient-to-r from-white via-cyber-200 to-emerald-200 bg-clip-text text-2xl font-extrabold tracking-tight text-transparent sm:text-3xl;
   }
 
   .developer-name-lg {
-    @apply bg-gradient-to-r from-slate-900 via-cyber-700 to-violet-700 bg-clip-text text-xl font-extrabold tracking-tight text-transparent;
+    @apply bg-gradient-to-r from-slate-900 via-cyber-700 to-emerald-700 bg-clip-text text-xl font-extrabold tracking-tight text-transparent;
   }
 
   .developer-name-md {
-    @apply bg-gradient-to-r from-cyber-600 to-violet-600 bg-clip-text text-base font-bold text-transparent;
+    @apply bg-gradient-to-r from-cyber-600 to-emerald-600 bg-clip-text text-base font-bold text-transparent;
   }
 
   .developer-name-sm {
@@ -985,7 +1081,7 @@
   }
 
   .developer-badge {
-    @apply inline-flex max-w-full flex-wrap items-center justify-center gap-1.5 rounded-full border border-cyber-500/30 bg-gradient-to-r from-cyber-500/10 via-violet-500/10 to-fuchsia-500/10 px-2.5 py-1.5 text-[10px] font-semibold text-cyber-300 shadow-glow min-[480px]:gap-2 min-[480px]:px-3 min-[480px]:text-xs;
+    @apply inline-flex max-w-full flex-wrap items-center justify-center gap-1.5 rounded-full border border-cyber-500/30 bg-gradient-to-r from-cyber-500/10 via-emerald-500/10 to-emerald-500/10 px-2.5 py-1.5 text-[10px] font-semibold text-cyber-300 shadow-glow min-[480px]:gap-2 min-[480px]:px-3 min-[480px]:text-xs;
   }
 
   .developer-badge-label {
@@ -993,7 +1089,7 @@
   }
 
   .developer-badge-name {
-    @apply bg-gradient-to-r from-cyber-300 to-violet-300 bg-clip-text font-bold text-transparent;
+    @apply bg-gradient-to-r from-cyber-300 to-emerald-300 bg-clip-text font-bold text-transparent;
   }
 
   .developer-banner {
@@ -1014,7 +1110,7 @@
   }
 
   .developer-orb-b {
-    @apply -bottom-10 -right-10 h-48 w-48 bg-violet-500/15;
+    @apply -bottom-10 -right-10 h-48 w-48 bg-emerald-500/15;
     animation: devFloat 10s ease-in-out infinite reverse;
   }
 
@@ -1060,7 +1156,7 @@
   }
 
   .developer-sidebar {
-    @apply mx-3 mb-3 flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-r from-cyber-50/80 to-violet-50/50 p-3;
+    @apply mx-3 mb-3 flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-r from-cyber-50/80 to-emerald-50/50 p-3;
   }
 
   .developer-sidebar-label {
@@ -1080,7 +1176,7 @@
   }
 
   .developer-card-glow {
-    @apply absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyber-500 via-violet-500 to-fuchsia-500;
+    @apply absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyber-500 via-emerald-500 to-emerald-500;
   }
 
   .developer-card-inner {

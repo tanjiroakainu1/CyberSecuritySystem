@@ -46,7 +46,7 @@ export function StatCard({ label, value, change, trend = 'neutral', icon }: Stat
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 min-[480px]:text-sm">
           {label}
         </p>
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyber-100 to-violet-100 text-cyber-600 shadow-soft transition-transform duration-300 group-hover:scale-110">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyber-100 to-emerald-100 text-cyber-600 shadow-soft transition-transform duration-300 group-hover:scale-110">
           {icon ?? (
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -178,7 +178,7 @@ export function ActionList({ items }: ActionListProps) {
           key={item.label}
           className="flex items-start gap-3 rounded-xl border border-slate-200/80 bg-gradient-to-r from-white to-slate-50/50 p-3 shadow-soft transition-all duration-300 min-[480px]:p-4 hover:border-cyber-200 hover:shadow-glow"
         >
-          <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyber-500 to-violet-600 text-xs font-bold text-white shadow-sm">
+          <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyber-500 to-emerald-600 text-xs font-bold text-white shadow-sm">
             ✓
           </span>
           <div className="min-w-0">

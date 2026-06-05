@@ -58,7 +58,7 @@ export function SystemFlowSection() {
               <div className="guest-pipeline-node from">{flow.from}</div>
               <div className="guest-pipeline-arrow">
                 <span className="guest-pipeline-action">{flow.action}</span>
-                <svg className="h-5 w-5 shrink-0 text-cyber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </div>
@@ -103,7 +103,7 @@ export function SystemFlowSection() {
           </div>
 
           <div className="guest-workflow-banner">
-            <span className="text-xs font-bold uppercase tracking-wider text-cyber-400">Workflow</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">Workflow</span>
             <p className="mt-1 text-sm text-slate-300">{selectedFlow.workflow[0]}</p>
           </div>
 
